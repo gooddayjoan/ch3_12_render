@@ -29,6 +29,7 @@ firecrawl-py==4.10.0
 frozenlist==1.8.0
 gitdb==4.0.12
 GitPython==3.1.45
+gunicorn==23.0.0
 h11==0.16.0
 h2==4.3.0
 hpack==4.1.0
