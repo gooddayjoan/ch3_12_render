@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search_list</title>
+    <style>
+        table{
+            text-align: center;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <form action="/search_list/" method="get">
+    <h1>顯示students資料表中特定資料</h1>
+    <table>
+        <h2><tr>
+            <th>編號</th>
+            <th>姓名</th>
+            <th>生日</th>
+            <th>電話</th>
+            <th>email</th>
+        </tr></h2>
+        {% for data in resultObj %}
+        <tr>
+            <td>{{ data.cID }}</td>
+            <td>{{ data.cName }}</td>
+            <td>{{ data.cBirthday|date:"Y-m-d" }}</td>
+            <td>{{ data.cPhone }}</td>
+            <td>{{ data.cEmail }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</body>
+</html>
